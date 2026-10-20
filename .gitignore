@@ -1,0 +1,22 @@
+# Build outputs
+build/
+cmake-build-*/
+out/
+*.o
+*.obj
+*.bin
+*.map
+*.exe
+*.dll
+*.lib
+
+# Python test artifacts
+__pycache__/
+*.py[cod]
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+CMakeUserPresets.json
