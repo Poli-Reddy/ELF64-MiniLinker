@@ -222,8 +222,10 @@ CTest registers:
 - `elf64-mini-real-objects`: optional; enabled only on Unix-like systems other
   than macOS when `bash` and a compiler named `cc`, `gcc`, or `clang` are found.
   It compiles `tests/a.c` and `tests/b.c` and links the resulting real ELF
-  objects. (On Windows the executable is `build/elf64-mini.exe`; the fixture
-  suite works with either name.)
+  objects, checks that a truncated compiler-produced object is rejected, and
+  compares section, symbol, and relocation details with GNU `readelf` when it
+  is available. (On Windows the executable is `build/elf64-mini.exe`; the
+  fixture suite works with either name.)
 
 If `pyelftools` is installed (`pip install pyelftools`), one additional test
 uses it as an independent parser to confirm that the generated fixtures are
